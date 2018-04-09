@@ -1,7 +1,16 @@
 #include "myFirstClass.h"
+#include "customer.h"
+
+customer::customer()
+{
+ ID=0;
+ name="Qui";
+ money=0.;
+}
 
 void myFirstClass::printHello()
 
 {
-std::cout<<"Madesant is so stupid"<<std::endl;
+std::cout<<"----- CUSTOMERS ------\n"<<std::endl;
 }
+
