@@ -6,7 +6,9 @@
 #include <vector>
 #include <cmath>
 #include "myFirstClass.h"
-#include "Particle.h"
+#include "Particle.h"    
+#include "LorentzMomentum.h"
+
 using namespace std;
 
 int main()
@@ -69,7 +71,28 @@ int main()
             std::cout << " ---------------------------------" << std::endl;
     }
     else cout<<"NOT FOUND"<<endl;
-	
-    //std::cout << "\n----------\n" << std::endl;
+ 
+    LorentzMomentum vec1=LorentzMomentum(4,3,0,0);
+    LorentzMomentum vec2=LorentzMomentum(2,1,0,0);
+    LorentzMomentum vec_sum=vec1+vec2;
+    double scal=0.;
+    scal=vec1*vec2;
+
+    std::cout<< vec_sum.getPx() <<std::endl;
+    std::cout<< scal <<std::endl;
+ 
+    
+//     std::vector<LorentzMomentum*> vec1;
+//     std::vector<LorentzMomentum*> vec2;
+//     std::vector<LorentzMomentum*> vec_sum;
+// 
+//     vec1.push_back(new LorentzMomentum(1,1));
+//     vec1.push_back(new LorentzMomentum(2,2));
+//     vec2.push_back(new LorentzMomentum(3,3));
+//     vec2.push_back(new LorentzMomentum(4,4));
+//     
+//     vec_sum=vec1+vec2;
+//     std::cout<< vec_sum[0] <<std::endl;
+    
     return 0;
 }

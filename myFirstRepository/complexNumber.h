@@ -20,6 +20,7 @@ class complexNumber{
         complexNumber getSumWith(complexNumber c);
         complexNumber operator+(complexNumber &c);
         
+        //void setVector(vector<double> vec1, vector<double> vec2){n_vec1=vec1; n_vec2=vec2;}
     private:
         //the complex number is z=a+ib
         double m_a;

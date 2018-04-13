@@ -1,9 +1,10 @@
 #include <iostream>
 #include "complexNumber.h"
+#include <vector>
 
 int main ()
 {
-    complexNumber c= complexNumber(1,3);
+    complexNumber c= complexNumber(1,1);
     std::cout<<" c is "<<c.getRealPart()<<" +i*"<<c.getImaginaryPart()<<" with norm "<<c.getNorm()<<std::endl;
     
     complexNumber d= complexNumber(2,4);
@@ -17,7 +18,6 @@ int main ()
     
     complexNumber f=c+d;
     std::cout<<" f is "<<f.getRealPart()<<" +i*"<<f.getImaginaryPart()<<" with norm "<<f.getNorm()<<std::endl;
-    
-    
+
     return 0;
 }
