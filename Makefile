@@ -16,12 +16,15 @@ CFLAGS = -g -Wall -I$(INCLUDEDIR) `root-config --cflags`
 # this is needed to create the bin directory if it doesn't exist
 _dummy := $(shell mkdir -p bin/ obj/)
 
-all: myFirstExample FirstParticleExercise
+all: myFirstExample FirstParticleExercise complex
 
 myFirstExample: $(OBJ_FILES)
 	$(CC) $(CFLAGS) -o bin/$@ $^ $(UTILDIR)/$@.cxx `root-config --libs`
 
 FirstParticleExercise: $(OBJ_FILES)
+	$(CC) $(CFLAGS) -o bin/$@ $^ $(UTILDIR)/$@.cxx `root-config --libs`
+
+complex: $(OBJ_FILES)
 	$(CC) $(CFLAGS) -o bin/$@ $^ $(UTILDIR)/$@.cxx `root-config --libs`
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cxx
